@@ -1,0 +1,12 @@
+provider "aws" {
+region = "ap-northeast-1"
+access_key = "key"
+secret_key = "hey"
+}
+resource "aws_instance" "test" {
+ami = "ami-00372384848487888be2fe22"
+instance_type = "t2.micro"
+tags = {
+Name = "my-instance"
+}
+}
