@@ -1,0 +1,12 @@
+provider "aws" {
+region =  "ap-northeast-1"
+access_key = "key"
+secret_key = "kkeyG"
+}
+resource "aws_instance" "sample" {
+ami = "ami-id"
+instance_type = "t2.micro"
+tags = {
+Name = "my-sample"
+}
+}
